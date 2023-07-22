@@ -1,10 +1,9 @@
-@extends('layouts.main', ['class' => 'off-canvas-sidebar', 'activePage' => 'login', 'title' => __('Booking')])
+@extends('layouts.main', ['class' => 'off-canvas-sidebar', 'activePage' => 'login', 'title' => __('')])
 
 @section('content')
 <div class="container" style="height: auto;">
     <div class="row align-items-center">
         <div class="col-md-9 ml-auto mr-auto mb-3 text-center">
-            <h3>{{ __('Log in here.') }}</h3>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
             <form class="form" method="POST" action="{{ route('login') }}">
@@ -14,10 +13,10 @@
                     <div class="card-header card-header-primary text-center">
                         <h4 class="card-title"><strong>{{ __('Login') }}</strong></h4>
                         <div class="social-line">
-                            <a href="#" class="btn btn-just-icon btn-link btn-white">
+                            <a href="https://www.facebook.com" class="btn btn-just-icon btn-link btn-white">
                                 <i class="fa fa-facebook-square"></i>
                             </a>
-                            <a href="#" class="btn btn-just-icon btn-link btn-white">
+                            <a href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Des" class="btn btn-just-icon btn-link btn-white">
                                 <i class="fa fa-twitter"></i>
                             </a>
                             <a href="#" class="btn btn-just-icon btn-link btn-white">

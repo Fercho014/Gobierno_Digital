@@ -59,14 +59,20 @@ class User extends Authenticatable implements JWTSubject
         $this->attributes['name'] = ucfirst($value);
     }
 
+    
+
     public function getJWTIdentifier()
     {
-    	return $this->getKey();
+        return $this->getKey();
     }
 
+    /**
+     * Return a key value array, containing any custom claims to be added to the JWT.
+     *
+     * @return array
+     */
     public function getJWTCustomClaims()
     {
-    	return [];
+        return [];
     }
-
 }

@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => 'users', 'titlePage' => 'Usuarios'])
+@extends('layouts.main', ['activePage' => 'users', 'titlePage' => ''])
 @section('content')
     <div class="content">
       <div class="container-fluid">
@@ -45,7 +45,7 @@
                               <td>{{ $user->fullname }}</td>
                               <td>
                                   @forelse ($user->roles as $role)
-                                    <span class="badge badge-info">{{ $role->name }}</span> 
+                                    <span class="badge badge-info">{{ $role->name }}</span>
                                   @empty
                                     <span class="badge badge-danger">No roles</span>
                                   @endforelse
@@ -58,7 +58,7 @@
                                 <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning"><i class="material-icons">edit</i></a>
                                 @endcan
                                 @can('user_destroy')
-                                <form action="{{ route('users.delete', $user->id) }}" method="POST" style="display: inline-block;" onsubmit="return confirm('¿Estas Seguro?')">
+                                <form action="{{ route('users.delete', $user->id) }}" method="POST" style="display: inline-block;" onsubmit="return confirm('Seguro?')">
                                 @csrf
                                 @method('DELETE')
                                     <button class="btn btn-danger" type="submit" rel="tooltip">

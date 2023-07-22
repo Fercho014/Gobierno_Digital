@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => 'permissions', 'titlePage' => 'Permisos'])
+@extends('layouts.main', ['activePage' => 'permissions', 'titlePage' => ''])
 
 @section('content')
   <div class="content">
@@ -47,7 +47,7 @@
                             @endcan
                             @can('permission_destroy')
                             <form action="{{ route('permissions.destroy', $permission->id) }}" method="POST"
-                              style="display: inline-block;" onsubmit="return confirm('¿Estas seguro?')">
+                              style="display: inline-block;" onsubmit="return confirm('Seguro?')">
                               @csrf
                               @method('DELETE')
                               <button class="btn btn-danger" type="submit" rel="tooltip">

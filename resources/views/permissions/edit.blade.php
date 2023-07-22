@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => 'permissions', 'titlePage' => 'Editar permiso'])
+@extends('layouts.main', ['activePage' => 'permissions', 'titlePage' => ''])
 @section('content')
 <div class="content">
   <div class="container-fluid">
